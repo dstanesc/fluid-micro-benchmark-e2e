@@ -22,9 +22,37 @@
   cursor: pointer;
 }
 
+.radios {
+  min-height: 10%;
+  font-size: 24px;
+  color: darkblue;
+  text-align: center;
+  cursor: pointer;
+}
+
+.stats {
+  min-height: 10%;
+  font-size: 24px;
+  color: darkblue;
+  text-align: left;
+  cursor: pointer;
+}
+
 .message {
   min-height: 50%;
   font-size: 24px;
   color: darkblue;
   text-align: center;
+}
+
+table {
+  border-style: solid;
+  border-width: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+td {
+  padding: 10px;
 }

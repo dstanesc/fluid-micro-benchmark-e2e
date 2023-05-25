@@ -1,8 +1,10 @@
 {
   "name": "fluid-micro-benchmark-e2e",
+  "description": "Fluid shared property set benchmark e2e",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@dstanesc/fake-metrology-data": "^0.0.3",
     "@dstanesc/shared-property-map": "^0.0.9",
     "@fluidframework/common-utils": "^0.32.1",
     "lodash": "^4.17.21",
