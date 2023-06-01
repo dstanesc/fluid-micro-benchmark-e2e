@@ -40,6 +40,6 @@ Local (Tinylicious)
 
 ![](./img/stats-tiny.png)
 
-Remote (FRS)
+Remote (FRS, EU)
 
 ![](./img/stats-frs-eu.png)
