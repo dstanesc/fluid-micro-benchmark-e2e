@@ -227,7 +227,7 @@ function App() {
       <div className="message">
         Latency {messageLatency()}, Payload {messageByteSize()}, Throughput:{" "}
         {messageThroughput()}
-        {""}
+        {" "}Hz
       </div>
       <div id="plotDiv"></div>
       <div id="plotDiv"></div>
