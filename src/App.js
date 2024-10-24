@@ -135,9 +135,10 @@ function App() {
   const execFn = (fn, arg1) => {
     fn(arg1);
     return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve();
-      }, 100);
+      resolve();
+      // setTimeout(() => {
+      //   resolve();
+      // }, 1);
     });
   };
 
@@ -158,6 +159,15 @@ function App() {
     const min = Math.min(...values);
     const max = Math.max(...values);
     return Number.isFinite(min) ? `min: ${min} ms, max: ${max} ms` : ``;
+  };
+
+  const messageThroughput = () => {
+    const firstPublishedTime = Math.min(...Array.from(startTimes.values()));
+    const lastArrivalTime = Math.max(...Array.from(endTimes.values()));
+    const totalArrived = endTimes.size;
+    const throughput =
+      (totalArrived / (lastArrivalTime - firstPublishedTime)) * 1000;
+    return throughput.toFixed(2);
   };
 
   const messageByteSize = () => {
@@ -215,7 +225,8 @@ function App() {
         [{button}]
       </div>
       <div className="message">
-        Latency {messageLatency()}, Payload {messageByteSize()}
+        Latency {messageLatency()}, Payload {messageByteSize()}, Throughput:{" "}
+        {messageThroughput()}
         {""}
       </div>
       <div id="plotDiv"></div>
